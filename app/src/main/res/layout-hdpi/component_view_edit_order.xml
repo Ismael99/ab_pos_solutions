@@ -157,7 +157,7 @@
         app:layout_constraintTop_toTopOf="@id/etOrderType"
         app:layout_constraintWidth="20dp" />
 
-    <TextView
+    <Spinner
         android:id="@+id/etOrderType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

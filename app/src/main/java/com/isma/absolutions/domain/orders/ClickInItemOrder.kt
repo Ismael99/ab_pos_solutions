@@ -37,7 +37,7 @@ class ClickInItemOrder @Inject constructor(
             val tvOrderNumber = view.findViewById<TextView>(R.id.tvOrderNumber)
             val tvTicketNumber = view.findViewById<TextView>(R.id.tvTickectNumber)
             val tvOrderDateTime = view.findViewById<TextView>(R.id.tvDateTime)
-            val typeOrder = view.findViewById<TextView>(R.id.etOrderType) as Spinner
+            val typeOrder = view.findViewById<Spinner>(R.id.etOrderType)
 
             //Para el spinner, dropdown
             val types = utilsOrders.getArrayOrderTypesNames()
