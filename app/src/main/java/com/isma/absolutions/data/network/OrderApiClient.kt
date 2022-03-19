@@ -1,6 +1,5 @@
 package com.isma.absolutions.data.network
 
-import com.isma.absolutions.data.model.OrderInfoModel
 import com.isma.absolutions.data.model.OrderModel
 import retrofit2.Response
 import retrofit2.http.*

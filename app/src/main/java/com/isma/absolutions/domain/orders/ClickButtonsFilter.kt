@@ -1,9 +1,7 @@
 package com.isma.absolutions.domain.orders
 
-import android.content.res.Resources
 import android.view.View
 import android.widget.Button
-import android.widget.ResourceCursorAdapter
 import com.isma.absolutions.R
 import com.isma.absolutions.databinding.ActivityOrdersListBinding
 import com.isma.absolutions.ui.viewModel.OrdersViewModel

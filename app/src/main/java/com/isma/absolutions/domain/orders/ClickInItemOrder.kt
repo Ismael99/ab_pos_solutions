@@ -39,6 +39,11 @@ class ClickInItemOrder @Inject constructor(
             val tvOrderDateTime = view.findViewById<TextView>(R.id.tvDateTime)
             val typeOrder = view.findViewById<Spinner>(R.id.etOrderType)
 
+            //settear valores en los textView
+            ("Order# ${order.orderId}").also { text -> tvOrderNumber.text = text }
+            ("Ticket# ${order.ticketNumber}").also { text -> tvTicketNumber.text = text }
+            order.orderDateTime.also { text -> tvOrderDateTime.text = text.toUpperCase() }
+
             //Para el spinner, dropdown
             val types = utilsOrders.getArrayOrderTypesNames()
             val adapterAutoComplete =
@@ -62,17 +67,11 @@ class ClickInItemOrder @Inject constructor(
                 true
             )//Le asigno dicha posicion como valor por defecto
 
-            //settear valores en los textView
-            ("Order# ${order.orderId}").also { text -> tvOrderNumber.text = text }
-            ("Ticket# ${order.ticketNumber}").also { text -> tvTicketNumber.text = text }
-            order.orderDateTime.also { text -> tvOrderDateTime.text = text.toUpperCase() }
-
         }
         //setear la view a mostrar en el alertDialog
         builder.setView(view)
         //Mostrar modal
         val alert = builder.show()
-
 
         //Para mostrar los bordes redondeados
         alert.window?.setBackgroundDrawableResource(R.color.bg_transparent)

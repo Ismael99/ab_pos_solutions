@@ -1,7 +1,5 @@
 package com.isma.absolutions.data.network
 
-import com.isma.absolutions.core.RetrofitHelper
-import com.isma.absolutions.data.model.OrderInfoModel
 import com.isma.absolutions.data.model.OrderModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

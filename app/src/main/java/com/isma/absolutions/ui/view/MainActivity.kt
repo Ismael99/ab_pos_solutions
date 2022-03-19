@@ -13,7 +13,7 @@ import android.widget.Toast
 import com.isma.absolutions.R
 import com.isma.absolutions.ui.view.OrdersList.OrdersListActivity
 import com.isma.absolutions.databinding.ActivityMainBinding
-import dagger.hilt.EntryPoint
+
 import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

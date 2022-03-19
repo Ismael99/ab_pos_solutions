@@ -1,9 +1,6 @@
 package com.isma.absolutions.ui.view.OrdersList.adapter
 
-import android.view.GestureDetector
-import android.view.MotionEvent
 import android.view.View
-import androidx.core.view.GestureDetectorCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.isma.absolutions.R
 import com.isma.absolutions.core.DoubleClick
