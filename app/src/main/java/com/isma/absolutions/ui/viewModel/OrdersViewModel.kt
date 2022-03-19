@@ -80,7 +80,7 @@ class OrdersViewModel @Inject constructor(
         orderTypeId: Int?
     ) {
         val filteredOrders = filterOrderByType(listOrders, orderTypeId)
-        listOrdersResponse.postValue(filteredOrders ?: emptyList())
+        listOrdersResponse.postValue(filteredOrders?.sortedByDescending { order -> order.orderDateTime } ?: emptyList())
     }
 
     fun searchByFullText(searchText: String?) {
