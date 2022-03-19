@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.OrdersList.OrdersListActivity">
+
+
+    <Button
+        android:id="@+id/btnAddTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:paddingHorizontal="20dp"
+        android:paddingStart="45dp"
+        android:text="Add Tip"
+        android:textSize="20sp"
+        app:flow_horizontalAlign="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".99"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:src="@drawable/ic_hand_holding_dollar_solid"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddTip"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddTip"
+        app:layout_constraintHeight="30dp"
+        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintStart_toStartOf="@+id/btnAddTip"
+        app:layout_constraintTop_toTopOf="@+id/btnAddTip"
+        app:layout_constraintWidth="30dp" />
+
+    <FrameLayout
+        android:id="@+id/labelDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rounded_10"
+        android:maxWidth="0dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddTip"
+        app:layout_constraintVertical_bias=".01"
+        app:layout_constraintWidth_max="1100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List of orders"
+            android:textSize="26sp" />
+
+
+        <TextView
+            android:id="@+id/tvNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textSize="26sp" />
+    </FrameLayout>
+
+    <SearchView
+        android:id="@+id/svOrders"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/hint_color"
+        android:inputType="text"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelDate"
+        app:layout_constraintVertical_bias=".01"
+        app:layout_constraintWidth_max="650dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrdersList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@id/groupButtonsFilters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/svOrders"
+        app:layout_constraintVertical_bias=".05"
+        app:layout_constraintWidth_max="1100dp" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/acent_color2"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/groupButtonsFilters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1, 2, 3, 4"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".99">
+
+        <TableRow android:id="@+id/btnsFilter">
+
+            <Button
+                android:id="@+id/btnAll"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/acent_color2"
+                android:text="All"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/btnToGo"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/hint_color"
+                android:text="To GO"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/btnDineIn"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/hint_color"
+                android:text="Dine In"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/btnPickUp"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/hint_color"
+                android:text="Pick Up"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/btnDelivery"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/hint_color"
+                android:text="Delivery"
+                android:textSize="28sp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/primary_dark"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_user_solid" />
+        </TableRow>
+    </TableLayout>
+
+
+    <FrameLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hint_color_ligth"
+        android:backgroundTint="@color/primary"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".08">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_x"
+            android:padding="15dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="@drawable/ic_check_solid"
+            android:padding="15dp"
+            android:textColor="@color/white" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

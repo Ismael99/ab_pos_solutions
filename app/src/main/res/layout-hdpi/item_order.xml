@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp"
+    android:background="@color/primary"
+    android:paddingVertical="10dp">
+
+    <ImageButton
+        android:id="@+id/ibPrint"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/bg_transparent"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_print_solid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="Order #: 3434 User Aby G Total: $34.43 Ticket#: 734"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ibPrint"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="Order time 02/04/2021 03:23:41 PM"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvTypeOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ibPrint"
+        app:layout_constraintTop_toBottomOf="@id/headerOrder" />
+
+    <TextView
+        android:id="@+id/tvTypeOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery - name"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ibPrint"
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_transparent"
+        app:layout_constraintWidth="20dp"
+        app:layout_constraintHeight="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/headerOrder"
+        app:layout_constraintHorizontal_bias=".8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_trash_can_solid"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

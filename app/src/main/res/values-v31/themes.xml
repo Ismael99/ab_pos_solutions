@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashTheme" parent="Theme.ABSolutions">
+        <item name="android:windowSplashScreenBackground">@color/primary_dark</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logoab_solutions</item>
+    </style>
+</resources>

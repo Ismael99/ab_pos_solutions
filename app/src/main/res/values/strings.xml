@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ABSolutions</string>
+    <string name="placeholderEtPassword">Ingrese Contraseña</string>
+    <string name="version">version name 1.0.0.prd</string>
+    <string name="register_key">Register Key 8734bv834g8734v</string>
+    <string name="btnSaveLabel">Guardar</string>
+    <string name="orderDateLabel">Order Date</string>
+    <string name="orderTime">Order Time</string>
+    <string name="hint_username">Username...</string>
+    <string name="hint_sub_total">Sub-Total...</string>
+    <string name="hint_order_type">Order Type...</string>
+</resources>

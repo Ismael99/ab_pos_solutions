@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_dark"
+        tools:context=".ui.view.MainActivity">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logoab_solutions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_max="600dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="600dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/bg_opacity_white"
+            android:enabled="false"
+            android:inputType="numberPassword"
+            android:paddingVertical="35dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="80dp"
+            android:scrollHorizontally="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias=".05"
+            app:layout_constraintWidth_max="900dp" />
+
+        <ImageView
+            android:id="@+id/showHiddenPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye_regular"
+            app:layout_constraintBottom_toBottomOf="@id/etPassword"
+            app:layout_constraintEnd_toEndOf="@+id/etPassword"
+            app:layout_constraintHeight="40dp"
+            app:layout_constraintHorizontal_bias=".98"
+            app:layout_constraintStart_toStartOf="@+id/etPassword"
+            app:layout_constraintTop_toTopOf="@+id/etPassword"
+            app:layout_constraintWidth="40dp" />
+
+        <TableLayout
+            android:id="@+id/gdTeclado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword"
+            app:layout_constraintVertical_bias=".2"
+            app:layout_constraintWidth_max="1050dp">
+
+            <TableRow android:layout_gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/btn_1"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="1"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="2"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="3"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="4"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="5"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="6"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btn_7"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="7"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+
+                <Button
+                    android:id="@+id/btn_8"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="8"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+
+                <Button
+                    android:id="@+id/btn_9"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="9"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="Clear"
+                    android:textColor="@color/primary"
+                    android:textSize="34sp" />
+
+                <Button
+                    android:id="@+id/btn_0"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="0"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+
+                <Button
+                    android:id="@+id/btnGo"
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_span="2"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="10dp"
+                    android:paddingVertical="45dp"
+                    android:text="Go"
+                    android:textColor="@color/primary"
+                    android:textSize="44sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/version"
+            android:textColor="@color/hint_color"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gdTeclado"
+            app:layout_constraintVertical_bias=".9" />
+
+        <ImageView
+            android:id="@+id/footer_logo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logoab_solutions"
+            app:layout_constraintBottom_toTopOf="@id/register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_max="74dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gdTeclado"
+            app:layout_constraintVertical_bias=".99"
+            app:layout_constraintWidth_max="74dp" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_key"
+            android:textColor="@color/hint_color"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gdTeclado"
+            app:layout_constraintVertical_bias=".9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
