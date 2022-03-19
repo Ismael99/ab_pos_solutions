@@ -85,8 +85,8 @@ class OrdersViewModel @Inject constructor(
 
     fun searchByFullText(searchText: String?) {
         val newList = this.listOrders.filter { order ->
-            order.orderId.toString().contains(searchText ?: " ")
+            order.orderId.toString().contains(searchText ?: " ") || order.username.toLowerCase().contains(searchText?.toLowerCase() ?: "")
         }
-        listOrdersResponse.postValue(newList)
+        listOrdersResponse.postValue(newList.sortedByDescending { order -> order.orderDateTime })
     }
 }
