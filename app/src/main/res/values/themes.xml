@@ -33,7 +33,7 @@
         <item name="android:maxWidth">1000dp</item>
     </style>
 
-    <style name="Spinner">
+    <style name="Spinner"  >
         <item name="android:textSize">25sp</item>
     </style>
 

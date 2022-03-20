@@ -49,10 +49,10 @@ class ClickInItemOrder @Inject constructor(
             val adapterAutoComplete =
                 ArrayAdapter(
                     view.context,
-                    android.R.layout.simple_spinner_item,
+                    R.layout.text_view_spinner,
                     types
                 )//Creo el adapter del spinner con el array de datos a mostrar
-            adapterAutoComplete.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            adapterAutoComplete.setDropDownViewResource(R.layout.text_view_spinner)
             typeOrder.setAdapter(adapterAutoComplete)
             //Setear valores en los edit text
             etUsername.setText(order.username)
@@ -64,7 +64,6 @@ class ClickInItemOrder @Inject constructor(
                 adapterAutoComplete.getPosition(typeCurrent)//Obtengo la pocision del options
             typeOrder.setSelection(
                 positionDefault,
-                true
             )//Le asigno dicha posicion como valor por defecto
 
         }
